@@ -1,0 +1,26 @@
+<h1>Available Videos</h1>
+
+<table class='table'>
+	<thead>
+		<th>Name</th>
+		<th>Genre</th>
+		<th>Description</th>
+		<th width='20%'>Action(s)</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat='video in videos'>
+			<td>{{video.title}}</td>
+			<td>{{video.genre}}</td>
+			<td>{{video.description}}</td>
+			<td>
+				<a href='/#/video/edit/{{video._id}}' class='btn btn-primary'>Edit</a>
+				<a href='/#/video/{{video._id}}' class='btn btn-warning'>Show</a>
+				<a href='/#/video/{{video._id}}/delete' class='btn btn-danger'>Delete</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>
+	<a href='/#/add-video' class='btn btn-primary btn-info'>Add a Video</a>
+</p>
